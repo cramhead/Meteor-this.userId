@@ -1,0 +1,29 @@
+<head>
+  <meta charset="utf-8">
+  <title>userIdPublish</title>
+</head>
+<body>
+{{loginButtons}}
+ {{> items}}
+</body>
+
+<template name="items">
+{{> addItem}}
+
+  <ul>
+  {{#each item}}
+    <li>{{name}}</li>
+  {{else }}
+    No items
+  {{/each}}
+  </ul>
+
+</template>
+
+<template name="addItem">
+  <div>
+    <input type="text" id="name">
+    <button id="add">Add</button>
+  </div>
+</template>
+
